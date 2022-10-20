@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Formik } from 'formik';
 import {
   Box,
@@ -10,8 +11,18 @@ import {
 const initialValues = { name: '', email: '', message: '' };
 
 export function Form() {
-  function handleFormSubmit(values, actions) {
-    // actions.resetForm();
+  function handleFormSubmit({ name, email, message }, actions) {
+    if (name && email && message) {
+      axios
+        .post('https://feedback-test-1-1.herokuapp.com/api/feedback', {
+          name,
+          email,
+          message,
+        })
+        .then(console.log)
+        .catch(console.log);
+      actions.resetForm();
+    }
   }
 
   return (

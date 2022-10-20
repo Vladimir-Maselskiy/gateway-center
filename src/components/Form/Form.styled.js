@@ -12,11 +12,6 @@ export const Box = styled.div`
 `;
 
 export const InputForm = styled(Form)`
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; */
-  /* gap: 8px; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
