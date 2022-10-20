@@ -1,16 +1,13 @@
+import { Box } from './Box/Box';
+import { GoogleMapComponent } from './GoogleMapComponent/GoogleMapComponent';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Box>
+      <Box width={976} height={976}>
+        <GoogleMapComponent />
+      </Box>
+      <Box height={200}>futter</Box>
+    </Box>
   );
 };
